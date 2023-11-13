@@ -1,4 +1,5 @@
 <?php
+
     /*
         Hacer un programa que, indicada una nómina en una variable, si es menor de 800€ le haga
         un incremento del 20%, si está entre 800 € y 1200 € la deje como está, y si es mayor le quite

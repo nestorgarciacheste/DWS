@@ -1,4 +1,5 @@
 <?php
+
     /*
         Crear una página que calcule el importe final de una factura. Debemos crear dos variables
         que contendrán el precio de un producto y las unidades adquiridas. Además, crear una

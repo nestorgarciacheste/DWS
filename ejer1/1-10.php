@@ -1,5 +1,21 @@
 <?php
-// Crear las variables
+
+    /*
+        Crear las variables código, nombre, apellidos, puesto, sueldo, edad, num_hijos y sucursal
+        e inicializarlas con los siguientes valores:
+        Realizar los siguientes cálculos de retenciones:
+            • Retención 1.- Si es Vendedor y el Sueldo mayor a 70000 aplicar una retención del 10%
+            sobre el sueldo y en caso contrario el 20%
+            • Retención 2.- Si tiene más de 50 años o más de 2 hijos aplicar una retención del 5% sobre
+            el sueldo y en caso contrario el 10%
+            • Retención 3.- Si el sueldo es mayor de 50000 y menor de 80000 aplicar una retención
+            del 5% sobre el sueldo y en caso contrario el 12%
+            • Retención 4.- Si tiene 1 o 2 hijos aplicar una retención del 10% sobre el sueldo y en caso
+            contrario el 5%
+            • Retención 5.- Si el sueldo es mayor de 80000 o no tiene hijos aplicar una retención del
+            15% sobre el sueldo y en caso contrario el 5%
+    */
+
 $codigo = 1;
 $nombre = "Juan";
 $apellidos = "Perez";

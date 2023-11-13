@@ -1,3 +1,7 @@
+<!-- 
+    Crear una página html donde se mostrará un título con la etiqueta html <h1>. Ese título
+    será el valor de una variable php. 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

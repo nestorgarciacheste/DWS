@@ -1,4 +1,11 @@
 <?php
+
+    /*
+        Crear un archivo php que, dados dos números almacenados en dos variables, nos muestre
+        por pantalla el mayor de ellos o la frase “Los números son iguales” si son iguales. Usar la
+        estructura switch y el operador nave espacial
+    */
+
 $numero1 = 10;
 $numero2 = 5; 
 

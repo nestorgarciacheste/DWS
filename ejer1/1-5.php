@@ -1,4 +1,10 @@
 <?php
+
+    /*
+        Hacer un programa en php que calcule el mayor de dos números almacenados en dos
+        variables usando el condicional if.
+    */
+
     $var = 1;
     $var2 = 2;
 

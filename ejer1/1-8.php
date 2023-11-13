@@ -1,4 +1,5 @@
 <?php 
+
     /* 
         Hacer un programa en php que defina una constante LÍMITE y genere un número aleatorio
         entre 1 y el límite y lo muestre por pantalla indicando si es par o impar. Usar el operador
