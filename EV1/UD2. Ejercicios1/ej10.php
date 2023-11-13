@@ -9,36 +9,27 @@ $edad = 26;
 $num_hijos = 0;
 $sucursal = "New York";
 
-echo "El sueldo inicial es de " . $sueldo . "<br>";
+$retencion1 = ($puesto === "Vendedor" && $sueldo > 70000) ? 0.10 : 0.20;
 
-if (strtolower($puesto) === "vendedor" && $sueldo > 70000) {
-    $sueldo -= $sueldo * 0.1;
-    echo "El sueldo se le reduce a " . $sueldo . "<br>";
-} else {
-    $sueldo -= $sueldo * 0.2;
-    echo "El sueldo se le reduce a " . $sueldo . "<br>";
-}
+$retencion2 = ($edad > 50 || $num_hijos > 2) ? 0.05 : 0.10;
 
-if ($edad > 50 || $num_hijos > 2) {
-    $sueldo -= $sueldo * 0.05;
-    echo "El sueldo se le reduce a " . $sueldo . "<br>";
-} else {
-    $sueldo -= $sueldo * 0.1;
-    echo "El sueldo se le reduce a " . $sueldo . "<br>";
-}
+$retencion3 = ($sueldo > 50000 && $sueldo < 80000) ? 0.05 : 0.12;
 
-if ($sueldo > 50000 && $sueldo < 80000) {
-    $sueldo -= $sueldo * 0.05;
-    echo "El sueldo se le reduce a " . $sueldo . "<br>";
-} else {
-    $sueldo -= $sueldo * 0.12;
-    echo "El sueldo se le reduce a " . $sueldo . "<br>";
-}
+$retencion4 = ($num_hijos >= 1 && $num_hijos <= 2) ? 0.10 : 0.05;
 
-if ($num_hijos === 1 || $num_hijos === 2) {
-    $sueldo -= $sueldo * 0.1;
-    echo "El sueldo final es de " . $sueldo . "<br>";
-} else {
-    $sueldo -= $sueldo * 0.05;
-    echo "El sueldo final es de " . $sueldo . "<br>";
-}
+$retencion5 = ($sueldo > 80000 || $num_hijos === 0) ? 0.15 : 0.05;
+
+$retencionTotal = $sueldo * ($retencion1 + $retencion2 + $retencion3 + $retencion4 + $retencion5);
+
+$sueldoNeto = $sueldo - $retencionTotal;
+
+echo "Código: $codigo\n";
+echo "Nombre: $nombre\n";
+echo "Apellido: $apellido\n";
+echo "Puesto: $puesto\n";
+echo "Sueldo: $sueldo\n";
+echo "Edad: $edad\n";
+echo "Número de hijos: $num_hijos\n";
+echo "Sucursal: $sucursal\n";
+echo "Retención Total: $retencionTotal\n";
+echo "Sueldo Neto: $sueldoNeto\n";
