@@ -21,8 +21,8 @@ $nombre = "Juan";
 $apellidos = "Perez";
 $puesto = "Vendedor";
 $sueldo = 75000;
-$edad = 55;
-$num_hijos = 3;
+$edad = 26;
+$num_hijos = 0;
 $sucursal = "Sucursal A";
 
 $retencion_1 = ($puesto == "Vendedor" && $sueldo > 70000) ? 0.10 : 0.20;
