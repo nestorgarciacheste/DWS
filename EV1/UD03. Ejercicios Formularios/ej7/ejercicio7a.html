@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio 7a</title>
+  </head>
+  <body>
+    <form action="ejercicio7b.php" method="get">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+      <label for="sexo">Sexo:</label>
+      <input type="radio" id="sexo" name="sexo" value="hombre" /> Hombre
+      <input type="radio" id="sexo" name="sexo" value="mujer" />
+      Mujer<br /><br />
+
+      <label for="edad">Edad:</label>
+      <select id="edad" name="edad" required>
+        <option value="">Sin especificar</option>
+        <option value="18">16</option>
+        <option value="18">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="18">21</option>
+        <option value="18">22</option>
+        <option value="18">23</option>
+        <option value="18">24</option></select
+      ><br /><br />
+
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" name="peso" required /><br /><br />
+
+      <label for="estadoCivil">Estado Civil:</label>
+      <input type="radio" id="estadoCivil" name="estadoCivil" value="soltero" />
+      Soltero
+      <input type="radio" id="estadoCivil" name="estadoCivil" value="casado" />
+      Casado
+      <input type="radio" id="estadoCivil" name="estadoCivil" value="otro" />
+      Otro<br /><br />
+
+      <label for="aficiones">Aficiones</label><br />
+      <input type="checkbox" id="cine" name="aficiones" value="cine" /> Cine
+      <br /><br />
+      <input
+        type="checkbox"
+        id="literatura"
+        name="aficiones"
+        value="literatura"
+      />
+      Literatura<br /><br />
+      <input type="checkbox" id="tebeos" name="aficiones" value="tebeos" />
+      Tebeos<br /><br />
+      <input type="checkbox" id="deporte" name="aficiones" value="deporte" />
+      Deporte<br /><br />
+      <input type="checkbox" id="musica" name="aficiones" value="musica" />
+      Musica<br /><br />
+      <input
+        type="checkbox"
+        id="television"
+        name="aficiones"
+        value="television"
+      />
+      Television<br /><br />
+
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <button onclick="resetForm()">Borrar formulario</button>
+
+    <script>
+      function resetForm() {
+        document.getElementById("nombre").value = "";
+        document.getElementById("sexo").checked = false;
+        document.getElementById("edad").selectedIndex = 0;
+        document.getElementById("peso").value = "";
+        var estadoCivil = document.getElementsByName("estadoCivil");
+        for (var i = 0; i < estadoCivil.length; i++) {
+          estadoCivil[i].checked = false;
+        }
+        var aficiones = document.getElementsByName("aficiones");
+        for (var i = 0; i < aficiones.length; i++) {
+          aficiones[i].checked = false;
+        }
+      }
+    </script>
+  </body>
+</html>
