@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validación de Datos</title>
+  </head>
+  <body>
+    <form action="ejercicio8b.php" method="post">
+      <label for="texto">Introduce el texto:</label>
+      <input type="text" id="texto" name="texto" required />
+
+      <br />
+
+      <label>Selecciona el tipo de validación:</label>
+      <br />
+      <input type="radio" id="email" name="filtro" value="email" required />
+      <label for="email">Email</label>
+
+      <input type="radio" id="numeros" name="filtro" value="numeros" />
+      <label for="numeros">Solo Números</label>
+
+      <input type="radio" id="nif" name="filtro" value="nif" />
+      <label for="nif">NIF</label>
+
+      <input type="radio" id="texto" name="filtro" value="texto" />
+      <label for="texto">Solo Texto</label>
+
+      <br />
+
+      <input type="submit" value="Validar" />
+    </form>
+  </body>
+</html>

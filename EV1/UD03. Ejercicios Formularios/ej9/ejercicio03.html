@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Alta de Usuario</title>
+  </head>
+  <body>
+    <form action="ejercicio03.php" method="post" enctype="multipart/form-data">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <br />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <br />
+
+      <label for="usuario">Nombre de Usuario:</label>
+      <input type="text" id="usuario" name="usuario" required />
+
+      <br />
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required />
+
+      <br />
+
+      <label for="confirm_password">Confirmar Contraseña:</label>
+      <input
+        type="password"
+        id="confirm_password"
+        name="confirm_password"
+        required
+      />
+
+      <br />
+
+      <label for="check1">Check 1:</label>
+      <input type="checkbox" id="check1" name="check1" />
+
+      <br />
+
+      <label for="check2">Check 2:</label>
+      <input type="checkbox" id="check2" name="check2" />
+
+      <br />
+
+      <label for="foto">Subir Foto:</label>
+      <input type="file" id="foto" name="foto" accept="image/*" required />
+
+      <br />
+
+      <input type="submit" value="Registrar" />
+    </form>
+  </body>
+</html>
