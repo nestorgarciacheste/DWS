@@ -1,45 +1,27 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $texto = $_POST["texto"];
-    $filtro = $_POST["filtro"];
+$texto = $_POST['texto'] ?? '';
+$tipo_validacion = $_POST['tipo_validacion'] ?? '';
 
-    switch ($filtro) {
-        case "email":
-            if (filter_var($texto, FILTER_VALIDATE_EMAIL)) {
-                echo "El texto es un email válido.";
-            } else {
-                echo "El texto no es un email válido.";
-            }
-            break;
+$esValido = false;
+$mensaje = "";
 
-        case "numeros":
-            if (ctype_digit($texto)) {
-                echo "El texto contiene solo números.";
-            } else {
-                echo "El texto no contiene solo números.";
-            }
-            break;
-
-        case "nif":
-            if (preg_match('/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i', $texto)) {
-                echo "El texto es un NIF válido.";
-            } else {
-                echo "El texto no es un NIF válido.";
-            }
-            break;
-
-        case "texto":
-            if (ctype_alpha($texto)) {
-                echo "El texto contiene solo letras.";
-            } else {
-                echo "El texto no contiene solo letras.";
-            }
-            break;
-
-        default:
-            echo "Selecciona un tipo de validación válido.";
-            break;
-    }
-} else {
-    echo "Acceso no permitido.";
+switch ($tipo_validacion) {
+    case 'email':
+        $esValido = filter_var($texto, FILTER_VALIDATE_EMAIL);
+        $mensaje = $esValido ? "El texto es un e-mail válido." : "El texto no es un e-mail válido.";
+        break;
+    case 'dni':
+        $patron_dni = "/^[0-9]{8}[A-Za-z]$/";
+        $esValido = preg_match($patron_dni, $texto);
+        $mensaje = $esValido ? "El texto es un DNI válido." : "El texto no es un DNI válido.";
+        break;
+    case 'numeros':
+        $esValido = filter_var($texto, FILTER_VALIDATE_INT);
+        $mensaje = $esValido ? "El texto contiene sólo números." : "El texto no contiene sólo números.";
+        break;
+    default:
+        $mensaje = "Por favor, selecciona un tipo de validación.";
+        break;
 }
+
+echo $mensaje;

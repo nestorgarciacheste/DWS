@@ -2,33 +2,25 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Validación de Datos</title>
+    <title>Validar Contenido</title>
   </head>
   <body>
-    <form action="ejercicio8b.php" method="post">
-      <label for="texto">Introduce el texto:</label>
-      <input type="text" id="texto" name="texto" required />
+    <h2>Validar contenido</h2>
 
-      <br />
+    <form action="ej8b.php" method="post">
+      <label for="texto">Escriba un texto a validar:</label>
+      <input type="text" id="texto" name="texto" /><br />
 
-      <label>Selecciona el tipo de validación:</label>
-      <br />
-      <input type="radio" id="email" name="filtro" value="email" required />
-      <label for="email">Email</label>
+      <label>Escoger validación:</label>
+      <input type="radio" id="email" name="tipo_validacion" value="email" />
+      <label for="email">E-mail</label>
+      <input type="radio" id="dni" name="tipo_validacion" value="dni" />
+      <label for="dni">DNI</label>
+      <input type="radio" id="numeros" name="tipo_validacion" value="numeros" />
+      <label for="numeros">Números</label><br />
 
-      <input type="radio" id="numeros" name="filtro" value="numeros" />
-      <label for="numeros">Solo Números</label>
-
-      <input type="radio" id="nif" name="filtro" value="nif" />
-      <label for="nif">NIF</label>
-
-      <input type="radio" id="texto" name="filtro" value="texto" />
-      <label for="texto">Solo Texto</label>
-
-      <br />
-
-      <input type="submit" value="Validar" />
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Borrar" />
     </form>
   </body>
 </html>

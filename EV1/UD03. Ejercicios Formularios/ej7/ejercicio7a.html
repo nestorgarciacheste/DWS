@@ -1,87 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title>Ejercicio 7a</title>
+    <meta charset="UTF-8" />
+    <title>Formulario de Datos Personales</title>
   </head>
   <body>
-    <form action="ejercicio7b.php" method="get">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required /><br /><br />
+    <h2>Formulario Datos personales</h2>
 
-      <label for="sexo">Sexo:</label>
-      <input type="radio" id="sexo" name="sexo" value="hombre" /> Hombre
-      <input type="radio" id="sexo" name="sexo" value="mujer" />
-      Mujer<br /><br />
+    <form action="ejercicio7b.php" method="get">
+      <label for="nombre">Escriba su nombre:</label>
+      <input type="text" id="nombre" name="nombre" /><br />
+
+      <label>Sexo:</label>
+      <input type="radio" id="hombre" name="sexo" value="hombre" />
+      <label for="hombre">Hombre</label>
+      <input type="radio" id="mujer" name="sexo" value="mujer" />
+      <label for="mujer">Mujer</label><br />
 
       <label for="edad">Edad:</label>
-      <select id="edad" name="edad" required>
+      <select id="edad" name="edad">
         <option value="">Sin especificar</option>
-        <option value="18">16</option>
-        <option value="18">17</option>
         <option value="18">18</option>
         <option value="19">19</option>
         <option value="20">20</option>
-        <option value="18">21</option>
-        <option value="18">22</option>
-        <option value="18">23</option>
-        <option value="18">24</option></select
-      ><br /><br />
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option></select
+      ><br />
 
-      <label for="peso">Peso (kg):</label>
-      <input type="number" id="peso" name="peso" required /><br /><br />
+      <label for="peso">Peso kg:</label>
+      <input type="number" id="peso" name="peso" step="0.01" /><br />
 
-      <label for="estadoCivil">Estado Civil:</label>
-      <input type="radio" id="estadoCivil" name="estadoCivil" value="soltero" />
-      Soltero
-      <input type="radio" id="estadoCivil" name="estadoCivil" value="casado" />
-      Casado
-      <input type="radio" id="estadoCivil" name="estadoCivil" value="otro" />
-      Otro<br /><br />
+      <label>Estado civil:</label>
+      <input type="radio" id="soltero" name="estado_civil" value="soltero" />
+      <label for="soltero">Soltero</label>
+      <input type="radio" id="casado" name="estado_civil" value="casado" />
+      <label for="casado">Casado</label>
+      <input type="radio" id="otro" name="estado_civil" value="otro" />
+      <label for="otro">Otro</label><br />
 
-      <label for="aficiones">Aficiones</label><br />
-      <input type="checkbox" id="cine" name="aficiones" value="cine" /> Cine
-      <br /><br />
+      <label>Aficiones:</label>
+      <input type="checkbox" id="cine" name="aficiones[]" value="cine" />
+      <label for="cine">Cine</label>
       <input
         type="checkbox"
         id="literatura"
-        name="aficiones"
+        name="aficiones[]"
         value="literatura"
       />
-      Literatura<br /><br />
-      <input type="checkbox" id="tebeos" name="aficiones" value="tebeos" />
-      Tebeos<br /><br />
-      <input type="checkbox" id="deporte" name="aficiones" value="deporte" />
-      Deporte<br /><br />
-      <input type="checkbox" id="musica" name="aficiones" value="musica" />
-      Musica<br /><br />
+      <label for="literatura">Literatura</label>
+      <input type="checkbox" id="teatro" name="aficiones[]" value="teatro" />
+      <label for="teatro">Teatro</label>
+      <input type="checkbox" id="deporte" name="aficiones[]" value="deporte" />
+      <label for="deporte">Deporte</label>
+      <input type="checkbox" id="musica" name="aficiones[]" value="musica" />
+      <label for="musica">Música</label>
       <input
         type="checkbox"
         id="television"
-        name="aficiones"
+        name="aficiones[]"
         value="television"
       />
-      Television<br /><br />
+      <label for="television">Televisión</label><br />
 
       <input type="submit" value="Enviar" />
+      <input type="reset" value="Borrar" />
     </form>
-
-    <button onclick="resetForm()">Borrar formulario</button>
-
-    <script>
-      function resetForm() {
-        document.getElementById("nombre").value = "";
-        document.getElementById("sexo").checked = false;
-        document.getElementById("edad").selectedIndex = 0;
-        document.getElementById("peso").value = "";
-        var estadoCivil = document.getElementsByName("estadoCivil");
-        for (var i = 0; i < estadoCivil.length; i++) {
-          estadoCivil[i].checked = false;
-        }
-        var aficiones = document.getElementsByName("aficiones");
-        for (var i = 0; i < aficiones.length; i++) {
-          aficiones[i].checked = false;
-        }
-      }
-    </script>
   </body>
 </html>
