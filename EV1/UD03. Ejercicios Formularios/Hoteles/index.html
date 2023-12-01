@@ -3,13 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <title>Gestión de Hoteles</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e7eff6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin: 10px 0;
+      }
+      a {
+        text-decoration: none;
+        color: #007bff;
+        padding: 10px 15px;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      a:hover {
+        background-color: #e1e7ed;
+      }
+    </style>
   </head>
   <body>
-    <h2>Gestión de Hoteles</h2>
-    <ul>
-      <li><a href="verHoteles.php">Ver todos los hoteles</a></li>
-      <li><a href="agregarHotel.php">Añadir nuevo hotel</a></li>
-      <li><a href="eliminarHotel.php">Eliminar un hotel</a></li>
-    </ul>
+    <div class="container">
+      <h2>Gestión de Hoteles</h2>
+      <ul>
+        <li><a href="verHoteles.php">Ver todos los hoteles</a></li>
+        <li><a href="agregarHotel.php">Añadir nuevo hotel</a></li>
+        <li><a href="eliminarHotel.php">Eliminar un hotel</a></li>
+      </ul>
+    </div>
   </body>
 </html>
